@@ -2,32 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* Typography Styles */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+/* Base Styles */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  min-height:100vh;
+  background-color: #1e2130;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Headings */
+h1 {
+  font-size: 64px;
+  line-height: 80px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+/* Body Text */
+.body-large {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.body-regular {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.body-small {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.body-extra-small {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.caption {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
 }

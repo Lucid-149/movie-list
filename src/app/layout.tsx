@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import BackgroundSvg from "@/assets/BackgroundSvg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <div className=" w-full absolute bottom-0 -z-10 left-0 h-[111px] flex items-end">
+
+        <BackgroundSvg/>
+        </div>
+      </body>
     </html>
   );
 }
