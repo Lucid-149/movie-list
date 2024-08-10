@@ -81,7 +81,7 @@ export default async function Page({
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
         {movies.items.map((m) => (
           <Link
-            className="bg-card hover:bg-card/55 hover:shadow-none transition-all animate-jump-in relative rounded-xl shadow-lg overflow-hidden col-span-1 aspect-[9/16] sm:p-8 flex flex-col gap-16 pb-16"
+            className="bg-card sm:h-full h-96 hover:bg-card/55 hover:shadow-none transition-all animate-jump-in relative rounded-xl shadow-lg overflow-hidden col-span-1 aspect-[9/16] sm:p-8 flex flex-col gap-16 pb-16"
             key={m.id}
             href={`/movies/edit/${m.id}`}
           >
@@ -90,7 +90,7 @@ export default async function Page({
               height={400}
               src={`${pb_url}/api/files/${m.collectionName}/${m.id}/${m.poster}`}
               alt={`Poster of ${m.title} (${m.year})`}
-              className="object-cover sm:rounded-xl rounded-t-xl h-full rounded-b-none"
+              className="object-cover sm:rounded-xl rounded-t-xl sm:h-full h-4/5  rounded-b-none"
             />
             <div className="px-12">
               <p className="text-base font-bold">{m.title}</p>
