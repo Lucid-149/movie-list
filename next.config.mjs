@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "movie-list.pockethost.io",
       },
+      {
+        protocol:"https",
+        hostname:"m.media-amazon.com"
+      }
     ],
   },
 };

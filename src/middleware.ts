@@ -58,7 +58,8 @@ export async function middleware(request: NextRequest) {
       const redirect_to = new URL(next_url, request.url);
       return NextResponse.redirect(redirect_to);
     }
-    const redirect_to = new URL(`/movies`,request.url);
+    const user = pb.authStore.model
+    const redirect_to = new URL(`/movies/${user?.id}`,request.url);
     return NextResponse.redirect(redirect_to);
 
   }
