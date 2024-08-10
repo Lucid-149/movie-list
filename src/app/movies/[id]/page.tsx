@@ -81,7 +81,7 @@ export default async function Page({
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
         {movies.items.map((m) => (
           <Link
-            className="bg-card relative rounded-xl shadow-lg overflow-hidden col-span-1 aspect-[9/16] sm:p-8 flex flex-col gap-16 pb-16"
+            className="bg-card animate-jump-in relative rounded-xl shadow-lg overflow-hidden col-span-1 aspect-[9/16] sm:p-8 flex flex-col gap-16 pb-16"
             key={m.id}
             href={`/movies/edit/${m.id}`}
           >
