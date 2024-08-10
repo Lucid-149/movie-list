@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -5,6 +6,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -12,10 +14,10 @@ const config: Config = {
         primary: "#3DD68C",
         error: "#F06A6A",
         background: {
-          DEFAULT: "#1E2130",
+          DEFAULT: "#093545",
         },
-        input: "#2D3748",
-        card: "#1A202C",
+        input: "#224957",
+        card: "#092C39",
       },
       container: {
         center: true,
@@ -45,6 +47,7 @@ const config: Config = {
       },
     },
   },
+  darkMode: "class",
   plugins: [
     require("tailwindcss-animated"),
     function ({ addComponents }: any) {

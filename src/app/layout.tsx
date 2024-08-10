@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Montserrat } from "next/font/google";
 import BackgroundSvg from "@/assets/BackgroundSvg";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,12 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <div className=" w-full absolute bottom-0 -z-10 left-0 h-[111px] flex items-end">
-
-        <BackgroundSvg/>
-        </div>
+      <body suppressHydrationWarning={true} className={montserrat.className}>
+          {children}
+          <BackgroundSvg />
       </body>
     </html>
   );
