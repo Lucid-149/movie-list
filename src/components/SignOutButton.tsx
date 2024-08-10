@@ -1,13 +1,17 @@
-"use client"
+"use client";
 import { logoutUser } from "@/utils/user";
-
+import { useRouter } from "next/navigation";
 import type { FC } from "react";
 
 const SignOutButton: FC = () => {
+  const router = useRouter();
   return (
     <button
       className=" flex items-center justify-center gap-16"
-      onClick={()=>logoutUser}
+      onClick={() => {
+        logoutUser();
+        router.push("/");
+      }}
     >
       <span className=" sm:flex hidden font-bold">Logout</span>{" "}
       <svg

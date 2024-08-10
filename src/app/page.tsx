@@ -1,9 +1,10 @@
 import Image from "next/image";
 import ImdbTop100 from "@/extra/json/imdb-top-100.json"
 import Link from "next/link";
+import HomeButton from "@/components/HomButton";
 
 export default function Home() {
-  return <main className=" grid sm:grid-cols-10 gap-2 place-content-center mx-auto h-screen overflow-hidden grid-cols-3 relative">
+  return <main className=" grid -mb-120 sm:grid-cols-10 gap-2 place-content-center mx-auto h-screen overflow-hidden grid-cols-3 relative">
     {ImdbTop100.map((m,i)=>(
       <Image key={i} src={m.image} className=" object-cover" width={200} height={400} alt={m.title}/>
     ))}
@@ -25,9 +26,7 @@ export default function Home() {
     <h3>
       Welcome to MovieList
     </h3>
-    <Link href={'/sign-in'} className=" py-16 px-32 hover:px-48 font-bold uppercase rounded-xl shadow-2xl bg-primary text-white hover:opacity-90 transition-all">
-    Sign In
-    </Link>
+    <HomeButton/>
     </div>
   </main>;
 }
